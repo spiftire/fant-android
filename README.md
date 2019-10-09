@@ -1,4 +1,12 @@
-Hvordan unngå HTTPS under utvikling
+# Skoleoppgave i Mobile og Distribuerete applikasjoner
+
+Dette er kildekode til innlevering av app oppgave.
+
+
+
+## Notater til oppgave
+
+Hvordan unngå HTTPS under utvikling??
 
 
 
