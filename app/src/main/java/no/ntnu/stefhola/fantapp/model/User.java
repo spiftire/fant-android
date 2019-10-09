@@ -25,13 +25,22 @@ class User {
 
     public User(JSONObject jsonObject) {
         try {
-            setFirstname(jsonObject.getString(FIRSTNAME));
-            setLastname(jsonObject.getString(LASTNAME));
-            setUsername(jsonObject.getString(USERNAME));
-            setEmail(jsonObject.getString(EMAIL));
+            if (jsonObject.has(FIRSTNAME)
+                    && jsonObject.has(LASTNAME)
+                    && jsonObject.has(USERNAME)
+                    && jsonObject.has(EMAIL)) {
+                setFirstname(jsonObject.getString(FIRSTNAME));
+                setLastname(jsonObject.getString(LASTNAME));
+                setUsername(jsonObject.getString(USERNAME));
+                setEmail(jsonObject.getString(EMAIL));
+            }
+            else {
+                Log.d(TAG, "Trying to create a user form json failed. JsonObject: " +
+                        jsonObject.toString());
+            }
         } catch (JSONException ex) {
             Log.d(TAG, "Trying to create a user form json failed. " +
-                    jsonObject + " " +
+                    jsonObject.toString() + " " +
                     ex.getMessage());
         }
     }
