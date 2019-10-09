@@ -47,6 +47,7 @@ public class ItemListActivity extends AppCompatActivity {
         toolbar.setTitle(getTitle());
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        // todo add action for this button. should create new sales item. Button should only be visible when logged in
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
