@@ -71,4 +71,7 @@ public class AddNewSalesItemActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
 }
